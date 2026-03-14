@@ -26,6 +26,7 @@
           <li><a href="#">Ensayo</a></li>
           <li><a href="#">Crónica</a></li>
           <li><a href="#">Convocatoria</a></li>
+          <li><a id="open-subscribe" class="nav-subscribe" style="cursor: pointer; color: var(--accent-color); font-weight: 700;">Suscríbete</a></li>
         </ul>
       </nav>
     </header>
@@ -113,6 +114,22 @@
         <p>&copy; 2026 Bornamez Literary Magazine. Todos los derechos reservados.</p>
       </div>
     </footer>
+
+    <div id="subscribe-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button id="close-modal" class="modal-close">&times;</button>
+        <div class="modal-body">
+          <div class="modal-logo">BORNA<span>MEZ</span></div>
+          <h2>Suscríbete a nuestra secuencia</h2>
+          <p>Recibe lo último en narrativa, ensayo y poesía directamente en tu buzón.</p>
+          <form id="subscribe-form" class="subscribe-form">
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Enviar</button>
+          </form>
+          <div id="subscribe-message" class="subscribe-message"></div>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
