@@ -50,22 +50,23 @@ a:hover {
 
 .top-bar {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centrado nuevamente */
   align-items: center;
-  padding: 0 20px;
-  margin-bottom: 5px; /* Reducido de 20px */
+  padding: 20px;
+  margin-bottom: 0;
+  width: 100%;
 }
 
 .logo {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Centrado */
   justify-content: center;
   font-family: 'Cinzel', serif;
   font-weight: 700;
-  color: var(--accent-color); /* Color Conchevino */
+  color: var(--accent-color);
   text-transform: uppercase;
-  padding: 10px 0; /* Reducido de 40px */
+  padding: 10px 0;
   line-height: 0.85;
 }
 
@@ -82,25 +83,55 @@ a:hover {
   margin-top: 5px;
 }
 
+.main-nav {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
 .main-nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   padding: 0;
   margin: 0;
-  padding-top: 10px;
 }
 
 .main-nav li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 .main-nav a {
-  font-family: var(--sans-main);
+  font-family: 'Cormorant Garamond', serif;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: 400;
-  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #333;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.main-nav a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 50%;
+  background-color: var(--accent-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.main-nav a:hover::after {
+  width: 100%;
 }
 
 /* Main Layout */
@@ -400,7 +431,7 @@ a:hover {
 
 .collage-section {
   width: 100%;
-  padding: 80px 0;
+  padding: 80px 0 0; /* Quitado el padding inferior */
   display: flex;
   justify-content: center;
   background: transparent;
@@ -409,7 +440,7 @@ a:hover {
 }
 
 .collage-figure {
-  width: 90%;
+  width: 100%; /* Ocupa todo el ancho */
   margin: 0;
   padding: 0;
   display: flex;
@@ -418,18 +449,21 @@ a:hover {
 }
 
 .collage-image {
-  max-width: 100%;
+  width: 100%; /* Ocupa todo el ancho */
   height: auto;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
   display: block;
 }
 
 .collage-caption {
-  margin-top: 25px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 10px;
   font-family: 'Cinzel', serif;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  color: #6b0d1e;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -439,7 +473,7 @@ a:hover {
 .site-footer {
   background: #000; /* Fondo negro para el pie de página */
   padding: 80px 0;
-  margin-top: 60px;
+  margin-top: 0; /* Eliminado el margen para que toque el collage */
   text-align: center;
   color: #fff; /* Texto blanco por defecto en el footer */
 }
@@ -489,16 +523,79 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .logo { font-size: 3rem; }
+  .logo-top, .logo-bottom { font-size: 3rem; }
   .featured-grid { grid-template-columns: 1fr; }
   .sidebar { border-left: none; padding-left: 0; border-top: 1px solid var(--border-color); padding-top: 40px; }
   .secondary-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .top-bar { flex-direction: column; gap: 10px; text-align: center; }
-  .account-links { margin-top: 10px; }
-  .main-nav ul { flex-wrap: wrap; }
+  .top-bar { 
+    padding: 15px;
+    flex-direction: column;
+  }
+  
+  .logo-top, .logo-bottom { 
+    font-size: 2rem; 
+    letter-spacing: 10px;
+    margin-right: -10px;
+  }
+
+  .main-nav {
+    padding: 5px 0;
+    width: 100%;
+  }
+
+  .main-nav ul { 
+    flex-wrap: wrap; 
+    gap: 8px;
+    padding: 10px;
+    justify-content: center;
+  }
+  
+  .main-nav li {
+    margin: 5px 10px;
+  }
+
+  .main-nav a {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-section {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .hero-article {
+    flex-direction: column;
+  }
+
+  .hero-text-left {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.9);
+  }
+
+  .magazine-quote {
+    font-size: 1.1rem;
+  }
+
   .secondary-grid { grid-template-columns: 1fr; }
-  .headline { font-size: 2rem; }
+  .headline { font-size: 1.6rem; }
+  
+  .collage-section {
+    padding: 20px 0 0;
+  }
+  
+  .collage-caption {
+    font-size: 0.55rem;
+    bottom: 10px;
+    right: 10px;
+    padding: 3px 6px;
+  }
 }
