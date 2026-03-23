@@ -10,14 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="masthead">
-      <div class="top-bar">
-        <div class="logo">
-          <span class="logo-top">BORNA</span>
-          <span class="logo-bottom">MEZ</span>
-        </div>
-      </div>
-      <nav class="main-nav">
+    <div class="cinematic-bg"></div>
+
+    <!-- Menú Desplegable (Dropdown) -->
+    <div class="dropdown-menu" id="sideMenu">
+      <nav class="dropdown-nav">
         <ul>
           <li><a href="#">Editorial</a></li>
           <li><a href="#">Reseña/Crítica</a></li>
@@ -28,90 +25,99 @@
           <li><a href="#">Convocatoria</a></li>
         </ul>
       </nav>
+    </div>
+
+    <header class="masthead">
+      <button class="hamburger" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="logo-wrapper">
+        <img src="/vestidoo.png" class="header-logo-img" alt="Emblema Bornamez">
+        <div class="logo">
+          <span>BORNA</span>
+          <span>MEZ</span>
+        </div>
+        <img src="/vestidoo.png" class="header-logo-img mirror" alt="Emblema Bornamez">
+      </div>
+      
+      <div class="header-spacer"></div>
     </header>
 
     <main id="app">
       <section class="hero-section">
-        <article class="hero-article full-image">
-          <div class="hero-text-left">
-            <span class="magazine-label">Revista Literaria</span>
-            <p class="magazine-quote">varada bajo una luz con la lengua en el pabellón</p>
-          </div>
-          <div class="photo-credit">Fotografía por Claudio Albarrán Briso</div>
-          <figure class="hero-image rotated-90">
-            <img src="/camino.jpg" alt="Portada Bornamez">
-          </figure>
-          <img src="/vestidoo.png" class="vestido-overlap" alt="Emblema Bornamez">
-        </article>
+        <div class="hero-content">
+          <span class="magazine-label">Revista Literaria</span>
+          <p class="magazine-quote">varada bajo una luz con la lengua en el pabellón</p>
+        </div>
       </section>
 
       <section class="ticker-section">
-        <div class="ticker-label">Últimas Secuencias</div>
+        <div class="ticker-label">Últimas Publicaciones</div>
         <div class="ticker-wrapper">
           <div class="ticker-track">
-            <!-- Artículos (Duplicados para el efecto infinito) -->
             <article class="ticker-item">
-              <span class="ticker-cat">Narrativa</span>
-              <h3>El eco de las palabras mudas</h3>
-              <p>Un recorrido por los paisajes sonoros de la infancia perdida.</p>
-              <div class="ticker-author">Julieta Romero</div>
+              <a href="#" class="item-link">
+                <span class="ticker-cat">Narrativa</span>
+                <h3>El eco de las palabras mudas</h3>
+                <p>Un recorrido por los paisajes sonoros de la infancia perdida.</p>
+                <div class="ticker-author">Julieta Romero</div>
+              </a>
             </article>
 
             <article class="ticker-item">
-              <span class="ticker-cat">Reseña</span>
-              <h3>Cine y Melancolía</h3>
-              <p>El legado de la Nouvelle Vague en nuestra mirada contemporánea.</p>
-              <div class="ticker-author">Sergio Valdés</div>
+              <a href="#" class="item-link">
+                <span class="ticker-cat">Reseña</span>
+                <h3>Cine y Melancolía</h3>
+                <p>El legado de la Nouvelle Vague en nuestra mirada contemporánea.</p>
+                <div class="ticker-author">Sergio Valdés</div>
+              </a>
             </article>
 
             <article class="ticker-item">
-              <span class="ticker-cat">Ensayo</span>
-              <h3>Arquitecturas del Deseo</h3>
-              <p>La ciudad como un cuerpo vivo que respira y olvida.</p>
-              <div class="ticker-author">Martín Casares</div>
+              <a href="#" class="item-link">
+                <span class="ticker-cat">Ensayo</span>
+                <h3>Arquitecturas del Deseo</h3>
+                <p>La ciudad como un cuerpo vivo que respira y olvida.</p>
+                <div class="ticker-author">Martín Casares</div>
+              </a>
             </article>
 
             <article class="ticker-item">
-              <span class="ticker-cat">Poesía</span>
-              <h3>Fragmentos de un naufragio</h3>
-              <p>Versos que exploran la fragilidad del tiempo y la belleza.</p>
-              <div class="ticker-author">Elena Mistral</div>
-            </article>
-
-            <!-- Duplicados para el loop -->
-            <article class="ticker-item">
-              <span class="ticker-cat">Narrativa</span>
-              <h3>El eco de las palabras mudas</h3>
-              <div class="ticker-author">Julieta Romero</div>
-            </article>
-
-            <article class="ticker-item">
-              <span class="ticker-cat">Reseña</span>
-              <h3>Cine y Melancolía</h3>
-              <div class="ticker-author">Sergio Valdés</div>
+              <a href="#" class="item-link">
+                <span class="ticker-cat">Narrativa</span>
+                <h3>El eco de las palabras mudas</h3>
+                <div class="ticker-author">Julieta Romero</div>
+              </a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="collage-section">
-        <figure class="collage-figure">
-          <img src="/collage.jpg" alt="Collage Bornamez" class="collage-image">
-          <figcaption class="collage-caption">Collage de Zita Henríquez</figcaption>
+      <section class="collage-section-new">
+        <figure class="collage-figure-new">
+          <img src="/collage.jpg" alt="Collage Bornamez" class="collage-img-new">
+          <figcaption class="collage-caption-new">Collage de Zita Henríquez</figcaption>
         </figure>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-content">
-        <img src="/vestidoo.png" class="footer-icon-main" alt="Emblema Bornamez">
-        <div class="footer-logo">BORNAMEZ</div>
-        <nav class="footer-nav">
-          <a href="#">Sobre Nosotros</a>
-          <a href="#">Contacto</a>
-        </nav>
-        <p>&copy; 2026 Bornamez Literary Magazine. Todos los derechos reservados.</p>
+      <img src="/vestidoo.png" class="footer-logo-img" alt="Emblema Bornamez">
+      <div class="footer-logo">BORNAMEZ</div>
+      
+      <!-- Formulario de Suscripción -->
+      <div class="subscribe-box">
+        <p>Suscríbete para recibir nuevas secuencias literarias.</p>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Enviar</button>
+        </form>
       </div>
+      
+      <p class="copyright">&copy; 2026 Bornamez Literary Magazine. Todos los derechos reservados.</p>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
