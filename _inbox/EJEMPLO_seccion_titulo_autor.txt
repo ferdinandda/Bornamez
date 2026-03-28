@@ -1,0 +1,10 @@
+Título: El título del texto
+Autor: Nombre Apellido
+Sección: Narrativa
+
+Texto:
+Aquí va el texto completo.
+
+Cada párrafo separado por una línea en blanco.
+
+Así de simple.

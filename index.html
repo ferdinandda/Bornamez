@@ -16,33 +16,32 @@
     <div class="dropdown-menu" id="sideMenu">
       <nav class="dropdown-nav">
         <ul>
-          <li><a href="#">Editorial</a></li>
-          <li><a href="#">Reseña/Crítica</a></li>
-          <li><a href="#">Poesía</a></li>
-          <li><a href="#">Narrativa</a></li>
-          <li><a href="#">Ensayo</a></li>
-          <li><a href="#">Crónica</a></li>
-          <li><a href="#">Convocatoria</a></li>
+          <li><a href="/editorial/">Editorial</a></li>
+          <li><a href="/resena/">Reseña/Crítica</a></li>
+          <li><a href="/poesia/">Poesía</a></li>
+          <li><a href="/narrativa/">Narrativa</a></li>
+          <li><a href="/ensayo/">Ensayo</a></li>
+          <li><a href="/cronica/">Crónica</a></li>
+          <li><a href="/convocatoria/">Convocatoria</a></li>
         </ul>
       </nav>
     </div>
 
     <header class="masthead">
-      <button class="hamburger" id="menuBtn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
+      <div class="header-left">
+        <div class="header-emblems" id="menuBtn">
+          <img src="/vestidoo.png" class="header-logo-img" alt="Emblema Bornamez">
+          <img src="/vestidoo.png" class="header-logo-img mirror" alt="Emblema Bornamez">
+        </div>
+      </div>
+
       <div class="logo-wrapper">
-        <img src="/vestidoo.png" class="header-logo-img" alt="Emblema Bornamez">
         <div class="logo">
           <span>BORNA</span>
           <span>MEZ</span>
         </div>
-        <img src="/vestidoo.png" class="header-logo-img mirror" alt="Emblema Bornamez">
       </div>
-      
+
       <div class="header-spacer"></div>
     </header>
 
@@ -55,53 +54,38 @@
       </section>
 
       <section class="ticker-section">
-        <div class="ticker-label">Últimas Publicaciones</div>
-        <div class="ticker-wrapper">
-          <div class="ticker-track">
-            <article class="ticker-item">
-              <a href="#" class="item-link">
-                <span class="ticker-cat">Narrativa</span>
-                <h3>El eco de las palabras mudas</h3>
-                <p>Un recorrido por los paisajes sonoros de la infancia perdida.</p>
-                <div class="ticker-author">Julieta Romero</div>
-              </a>
-            </article>
+        <div class="pub-label">Últimas Publicaciones</div>
+        <div class="pub-grid">
+          <article class="pub-item">
+            <a href="/narrativa/calle-florida-esquina-viamonte.html" class="pub-link">
+              <span class="pub-cat">Narrativa</span>
+              <h3>Calle Florida esquina Viamonte</h3>
+              <p>Vamos lento, abrazándonos, charlándonos de muy cerca porque en este verano, calle Florida se llenó de ruidos de taladros.</p>
+              <div class="pub-author">Ozuljevic Ashle</div>
+            </a>
+          </article>
 
-            <article class="ticker-item">
-              <a href="#" class="item-link">
-                <span class="ticker-cat">Reseña</span>
-                <h3>Cine y Melancolía</h3>
-                <p>El legado de la Nouvelle Vague en nuestra mirada contemporánea.</p>
-                <div class="ticker-author">Sergio Valdés</div>
-              </a>
-            </article>
+          <article class="pub-item">
+            <a href="/ensayo/ceniza-digital-en-urna-digital.html" class="pub-link">
+              <span class="pub-cat">Ensayo</span>
+              <h3>Ceniza digital en urna digital</h3>
+              <p>Un recorrido por los cenotafios, los muertos sin lugar y los nuevos rituales del duelo.</p>
+              <div class="pub-author">Nicolás Campos Farfán</div>
+            </a>
+          </article>
 
-            <article class="ticker-item">
-              <a href="#" class="item-link">
-                <span class="ticker-cat">Ensayo</span>
-                <h3>Arquitecturas del Deseo</h3>
-                <p>La ciudad como un cuerpo vivo que respira y olvida.</p>
-                <div class="ticker-author">Martín Casares</div>
-              </a>
-            </article>
+          <article class="pub-item">
+            <a href="/ensayo/el-futuro-como-advertencia.html" class="pub-link">
+              <span class="pub-cat">Ensayo</span>
+              <h3>El futuro como advertencia</h3>
+              <p>Distopía y temporalidad en los imaginarios culturales latinoamericanos.</p>
+              <div class="pub-author">Mónica Stillo</div>
+            </a>
+          </article>
 
-            <article class="ticker-item">
-              <a href="#" class="item-link">
-                <span class="ticker-cat">Narrativa</span>
-                <h3>El eco de las palabras mudas</h3>
-                <div class="ticker-author">Julieta Romero</div>
-              </a>
-            </article>
-          </div>
         </div>
       </section>
 
-      <section class="collage-section-new">
-        <figure class="collage-figure-new">
-          <img src="/collage.jpg" alt="Collage Bornamez" class="collage-img-new">
-          <figcaption class="collage-caption-new">Collage de Zita Henríquez</figcaption>
-        </figure>
-      </section>
     </main>
 
     <footer class="site-footer">
@@ -110,10 +94,11 @@
       
       <!-- Formulario de Suscripción -->
       <div class="subscribe-box">
-        <p>Suscríbete para recibir nuevas secuencias literarias.</p>
-        <form class="subscribe-form">
-          <input type="email" placeholder="Tu correo electrónico" required>
+        <p>Suscríbete para recibir nuevas publicaciones.</p>
+        <form class="subscribe-form" id="subscribeForm">
+          <input type="email" id="subscribeEmail" placeholder="Tu correo electrónico" required>
           <button type="submit">Enviar</button>
+          <span class="subscribe-msg" id="subscribeMsg"></span>
         </form>
       </div>
       

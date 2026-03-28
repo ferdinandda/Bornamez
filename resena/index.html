@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reseña/Crítica | Bornamez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/articulo.css">
+  </head>
+  <body>
+
+    <div class="dropdown-menu" id="sideMenu">
+      <nav class="dropdown-nav">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/editorial/">Editorial</a></li>
+          <li><a href="/resena/">Reseña/Crítica</a></li>
+          <li><a href="/poesia/">Poesía</a></li>
+          <li><a href="/narrativa/">Narrativa</a></li>
+          <li><a href="/ensayo/">Ensayo</a></li>
+          <li><a href="/convocatoria/">Convocatoria</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <header class="masthead">
+      <div class="header-left">
+        <div class="header-emblems" id="menuBtn">
+          <img src="/vestidoo.png" class="header-logo-img" alt="Emblema Bornamez">
+          <img src="/vestidoo.png" class="header-logo-img mirror" alt="Emblema Bornamez">
+        </div>
+      </div>
+      <div class="logo-wrapper">
+        <a href="/" style="text-decoration:none">
+          <div class="logo"><span>BORNA</span><span>MEZ</span></div>
+        </a>
+      </div>
+      <div class="header-spacer"></div>
+    </header>
+
+    <main class="seccion-main">
+      <h1 class="seccion-titulo">Reseña/Crítica</h1>
+      <div class="seccion-grid">
+        <article class="seccion-item">
+          <a href="/resena/el-que-aqui-reposa-fue-criminal-y-llego-a-ser-godino.html" class="seccion-link">
+            <span class="seccion-cat">Reseña/Crítica</span>
+            <h2>El que aquí reposa fue criminal y llegó a ser Godino</h2>
+            <p>Sobre <em>El Petiso Orejudo</em> de María Moreno: crónica, archivo y la humanización de un mito policial argentino.</p>
+            <div class="seccion-autor">Diego Leiva Quilabrán</div>
+          </a>
+        </article>
+
+        <!-- Para agregar un texto nuevo, copia el bloque <article> de arriba y pégalo aquí -->
+      </div>
+    </main>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const sideMenu = document.getElementById('sideMenu');
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sideMenu.classList.toggle('active');
+      });
+      document.addEventListener('click', (e) => {
+        if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target))
+          sideMenu.classList.remove('active');
+      });
+    </script>
+  </body>
+</html>
