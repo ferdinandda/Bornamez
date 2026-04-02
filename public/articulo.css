@@ -408,3 +408,141 @@ html, body {
 }
 
 .articulo-volver:hover { color: var(--accent-color); }
+
+/* Editorial */
+.editorial-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 140px 40px 120px;
+}
+
+.editorial-wrapper {
+  max-width: 680px;
+  width: 100%;
+}
+
+.editorial-label {
+  font-family: var(--serif-heading);
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 28px;
+}
+
+.editorial-titulo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 2.8rem;
+  line-height: 1.1;
+  color: var(--text-color);
+  margin: 0 0 36px;
+}
+
+.editorial-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--accent-color);
+  margin-bottom: 52px;
+  opacity: 0.5;
+}
+
+.editorial-body p {
+  font-size: 1.05rem;
+  line-height: 1.95;
+  color: rgba(26,26,27,0.82);
+  margin-bottom: 1.8em;
+  text-align: justify;
+}
+
+.editorial-body p:first-child::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 0.8;
+  float: left;
+  margin-right: 12px;
+  margin-top: 8px;
+  color: var(--accent-color);
+}
+
+/* Convocatoria */
+.conv-body p {
+  font-size: 1.05rem;
+  line-height: 1.95;
+  color: rgba(26,26,27,0.82);
+  margin-bottom: 1.6em;
+  text-align: justify;
+}
+
+.conv-subtitulo {
+  font-family: var(--serif-heading);
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-weight: 400;
+  margin: 52px 0 20px;
+}
+
+.conv-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.6em;
+}
+
+.conv-lista li {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: rgba(26,26,27,0.82);
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 0.4em;
+  text-align: justify;
+}
+
+.conv-lista li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  opacity: 0.5;
+}
+
+.conv-contacto {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(26,26,27,0.08);
+}
+
+.conv-contacto p {
+  margin-bottom: 8px;
+}
+
+.conv-email {
+  display: inline-block;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(107,13,30,0.3);
+  padding-bottom: 2px;
+  margin-bottom: 40px;
+  transition: border-color 0.3s;
+}
+
+.conv-email:hover {
+  border-color: var(--accent-color);
+}
+
+.conv-cierre {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(26,26,27,0.5);
+  line-height: 1.8;
+}
