@@ -51,7 +51,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 72px;
-  background: transparent;
+  background: #1a1a1b;
   z-index: 2100;
   display: flex;
   align-items: center;
@@ -69,12 +69,26 @@ html, body {
   align-items: center;
 }
 
-@keyframes emblemHint {
-  0%   { transform: translateY(0); }
-  30%  { transform: translateY(-4px); }
-  50%  { transform: translateY(0); }
-  70%  { transform: translateY(-2px); }
-  100% { transform: translateY(0); }
+@keyframes emblemDance {
+  0%   { transform: translateY(0) rotate(0deg); }
+  15%  { transform: translateY(-6px) rotate(-2deg); }
+  30%  { transform: translateY(-2px) rotate(1.5deg); }
+  45%  { transform: translateY(-8px) rotate(-1deg); }
+  60%  { transform: translateY(-3px) rotate(2deg); }
+  75%  { transform: translateY(-6px) rotate(-1.5deg); }
+  90%  { transform: translateY(-1px) rotate(1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes emblemDanceMirror {
+  0%   { transform: scaleX(-1) translateY(0) rotate(0deg); }
+  15%  { transform: scaleX(-1) translateY(-4px) rotate(2deg); }
+  30%  { transform: scaleX(-1) translateY(-8px) rotate(-1.5deg); }
+  45%  { transform: scaleX(-1) translateY(-2px) rotate(1deg); }
+  60%  { transform: scaleX(-1) translateY(-7px) rotate(-2deg); }
+  75%  { transform: scaleX(-1) translateY(-3px) rotate(1.5deg); }
+  90%  { transform: scaleX(-1) translateY(-6px) rotate(-1deg); }
+  100% { transform: scaleX(-1) translateY(0) rotate(0deg); }
 }
 
 .header-emblems {
@@ -84,12 +98,18 @@ html, body {
   cursor: pointer;
   opacity: 0.85;
   transition: opacity 0.3s;
-  animation: emblemHint 2.5s ease-in-out 2s 2;
 }
 
 .header-emblems:hover {
   opacity: 1;
-  animation: none;
+}
+
+.header-emblems:hover .header-logo-img:not(.mirror) {
+  animation: emblemDance 1.8s ease-in-out infinite;
+}
+
+.header-emblems:hover .header-logo-img.mirror {
+  animation: emblemDanceMirror 1.8s ease-in-out 0.2s infinite;
 }
 
 .header-logo-img {
@@ -120,8 +140,8 @@ html, body {
   align-items: center;
   margin-right: 0;
   
-  color: var(--accent-color);
-  -webkit-text-fill-color: var(--accent-color);
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
   
   transition: all 0.3s ease;
 }
@@ -129,10 +149,10 @@ html, body {
 .logo span { display: block; }
 
 .masthead.scrolled {
-  background: rgba(249, 247, 242, 0.6);
+  background: rgba(26, 26, 27, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(26, 26, 27, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Menú Desplegable (Pequeño y Elegante - Negro) */
@@ -239,34 +259,32 @@ html, body {
 /* Sección Últimas Publicaciones */
 .ticker-section {
   padding: 100px 60px;
-  background: #f9f6ef;
+  background: var(--bg-color);
   position: relative;
   z-index: 20;
 }
 
 .pub-label {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: 0.75rem;
-  letter-spacing: 8px;
+  font-family: var(--serif-heading);
+  font-size: 0.6rem;
+  letter-spacing: 6px;
   text-transform: uppercase;
-  margin-bottom: 50px;
-  text-align: center;
-  color: rgba(26, 26, 27, 0.3);
+  margin-bottom: 60px;
+  text-align: left;
+  color: var(--accent-color);
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(26, 26, 27, 0.1);
 }
 
 .pub-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(26, 26, 27, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .pub-item {
-  border-right: 1px solid rgba(26, 26, 27, 0.12);
-}
-
-.pub-item:last-child {
-  border-right: none;
+  border: 1px solid rgba(26, 26, 27, 0.12);
+  background: #ffffff;
 }
 
 .pub-link {
@@ -274,31 +292,32 @@ html, body {
   flex-direction: column;
   text-decoration: none;
   color: inherit;
-  padding: 40px 36px;
-  height: 100%;
-  transition: background 0.3s;
+  padding: 36px 40px;
+  transition: background 0.3s, border-color 0.3s;
 }
 
 .pub-link:hover {
-  background: rgba(26, 26, 27, 0.03);
+  background: rgba(26, 26, 27, 0.02);
+  border-color: rgba(107, 13, 30, 0.2);
 }
 
 .pub-cat {
   font-family: var(--serif-heading);
-  font-size: 0.65rem;
-  letter-spacing: 3px;
+  font-size: 0.58rem;
+  letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--accent-color);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   display: block;
 }
 
 .pub-item h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 1.2;
-  margin: 0 0 16px;
+  font-style: italic;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  margin: 0 0 18px;
   color: #1a1a1b;
   transition: color 0.3s;
 }
@@ -308,9 +327,9 @@ html, body {
 }
 
 .pub-item p {
-  font-family: var(--serif-main);
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  line-height: 1.65;
   color: rgba(26, 26, 27, 0.55);
   margin: 0;
   flex: 1;
@@ -318,21 +337,18 @@ html, body {
 
 .pub-author {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.65rem;
+  font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: rgba(26, 26, 27, 0.4);
   margin-top: 28px;
 }
 
 @media (max-width: 768px) {
   .pub-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
-  .pub-item:nth-child(2) { border-right: none; }
-  .pub-item:nth-child(3) { border-top: 1px solid rgba(26, 26, 27, 0.12); }
-  .pub-item:nth-child(4) { border-top: 1px solid rgba(26, 26, 27, 0.12); }
 }
 
 /* Footer */
