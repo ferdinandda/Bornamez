@@ -1,7 +1,9 @@
+import 'dotenv/config';
 import express from 'express';
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import nodemailer from 'nodemailer';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DB_PATH = join(__dirname, 'Suscriptores', 'suscriptores.json');
@@ -15,7 +17,15 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post('/suscribir', (req, res) => {
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'revistabornamez@gmail.com',
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+});
+
+app.post('/suscribir', async (req, res) => {
   const { email } = req.body;
 
   if (!email || !email.includes('@')) {
@@ -30,6 +40,17 @@ app.post('/suscribir', (req, res) => {
 
   data.push({ email, fecha: new Date().toISOString() });
   writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
+
+  try {
+    await transporter.sendMail({
+      from: '"Bornamez" <revistabornamez@gmail.com>',
+      to: 'revistabornamez@gmail.com',
+      subject: 'Nueva suscripción a Bornamez',
+      text: `Se ha suscrito un nuevo lector:\n\n${email}\n\nFecha: ${new Date().toLocaleString('es-AR')}`,
+    });
+  } catch (err) {
+    console.error('Error al enviar notificación:', err.message);
+  }
 
   res.json({ ok: true });
 });

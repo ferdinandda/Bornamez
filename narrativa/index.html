@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="/articulo.css">
     <style>
       :root {
-        --page-bg: #0e0e0e;
-        --page-text: #ebebeb;
-        --page-text-muted: rgba(235,235,235,0.55);
-        --page-text-author: rgba(235,235,235,0.4);
-        --page-card-bg: #1a1a1a;
-        --page-card-border: rgba(235,235,235,0.08);
-        --page-heading-color: #f0f0f0;
-        --page-divider: rgba(235,235,235,0.1);
-        --accent-color: #d94f5c;
+        --page-bg: #f1f0ed;
+        --page-text: #1a1a1b;
+        --page-text-muted: rgba(26,26,27,0.82);
+        --page-text-author: rgba(26,26,27,0.68);
+        --page-card-bg: #ffffff;
+        --page-card-border: rgba(26,26,27,0.1);
+        --page-heading-color: #1a1a1b;
+        --page-divider: rgba(26,26,27,0.1);
+        --accent-color: #2e5f7a;
       }
     </style>
   </head>
@@ -41,8 +41,11 @@
     <header class="masthead">
       <div class="header-left">
         <div class="header-emblems" id="menuBtn">
-          <img src="/vestidoo.png" class="header-logo-img" alt="Emblema Bornamez">
-          <img src="/vestidoo.png" class="header-logo-img mirror" alt="Emblema Bornamez">
+          <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </div>
       </div>
       <div class="logo-wrapper">
@@ -63,10 +66,14 @@
 
         <article class="seccion-item">
           <a href="/narrativa/calle-florida-esquina-viamonte.html" class="seccion-link">
-            <span class="seccion-cat">Narrativa</span>
-            <h2>Calle Florida esquina Viamonte</h2>
-            <p>Vamos lento, abrazándonos, charlándonos de muy cerca porque en este verano, calle Florida se llenó de ruidos de taladros.</p>
-            <div class="seccion-autor">Ozuljevic Ashle</div>
+            <div class="seccion-meta">
+              <span class="seccion-cat">Narrativa</span>
+              <div class="seccion-autor">Ozuljevic Ashle</div>
+            </div>
+            <div class="seccion-cuerpo">
+              <h2>Calle Florida esquina Viamonte</h2>
+              <p>Vamos lento, abrazándonos, charlándonos de muy cerca porque en este verano, calle Florida se llenó de ruidos de taladros.</p>
+            </div>
           </a>
         </article>
 

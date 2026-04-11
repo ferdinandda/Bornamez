@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="/articulo.css">
     <style>
       :root {
-        --page-bg: #f2f0ec;
+        --page-bg: #f1f0ed;
         --page-text: #1a1a1b;
-        --page-text-muted: rgba(26,26,27,0.55);
-        --page-text-author: rgba(26,26,27,0.4);
+        --page-text-muted: rgba(26,26,27,0.82);
+        --page-text-author: rgba(26,26,27,0.68);
         --page-card-bg: #ffffff;
-        --page-card-border: rgba(26,26,27,0.12);
+        --page-card-border: rgba(26,26,27,0.1);
         --page-heading-color: #1a1a1b;
         --page-divider: rgba(26,26,27,0.1);
+        --accent-color: #8b4513;
       }
+
     </style>
   </head>
   <body>
@@ -40,8 +42,11 @@
     <header class="masthead">
       <div class="header-left">
         <div class="header-emblems" id="menuBtn">
-          <img src="/vestidoo.png" class="header-logo-img" alt="Emblema Bornamez">
-          <img src="/vestidoo.png" class="header-logo-img mirror" alt="Emblema Bornamez">
+          <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
         </div>
       </div>
       <div class="logo-wrapper">
@@ -52,7 +57,7 @@
       <div class="header-spacer"></div>
     </header>
 
-    <div class="seccion-hero seccion-hero--artistica" style="background-image: url('/secciones/resena.jpg');">
+    <div class="seccion-hero" style="background-image: url('/secciones/resena.jpg');">
       <h1 class="seccion-hero-titulo">Reseña</h1>
     </div>
 
@@ -60,10 +65,14 @@
       <div class="seccion-grid">
         <article class="seccion-item">
           <a href="/resena/el-que-aqui-reposa-fue-criminal-y-llego-a-ser-godino.html" class="seccion-link">
-            <span class="seccion-cat">Reseña/Crítica</span>
-            <h2>El que aquí reposa fue criminal y llegó a ser Godino</h2>
-            <p>Sobre <em>El Petiso Orejudo</em> de María Moreno: crónica, archivo y la humanización de un mito policial argentino.</p>
-            <div class="seccion-autor">Diego Leiva Quilabrán</div>
+            <div class="seccion-meta">
+              <span class="seccion-cat">Reseña/Crítica</span>
+              <div class="seccion-autor">Diego Leiva Quilabrán</div>
+            </div>
+            <div class="seccion-cuerpo">
+              <h2>El que aquí reposa fue criminal y llegó a ser Godino</h2>
+              <p>Sobre <em>El Petiso Orejudo</em> de María Moreno: crónica, archivo y la humanización de un mito policial argentino.</p>
+            </div>
           </a>
         </article>
 

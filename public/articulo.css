@@ -1,15 +1,15 @@
 :root {
-  --bg-color: #f9f7f2;
+  --bg-color: #f1f0ed;
   --text-color: #1a1a1b;
   --accent-color: #6b0d1e;
   --serif-main: 'Libre Baskerville', serif;
   --serif-heading: 'Cinzel', serif;
 
   /* Variables de página (override por sección) */
-  --page-bg: #f9f7f2;
+  --page-bg: #f1f0ed;
   --page-text: #1a1a1b;
-  --page-text-muted: rgba(26,26,27,0.55);
-  --page-text-author: rgba(26,26,27,0.4);
+  --page-text-muted: rgba(26,26,27,0.78);
+  --page-text-author: rgba(26,26,27,0.65);
   --page-card-bg: #ffffff;
   --page-card-border: rgba(26,26,27,0.12);
   --page-heading-color: #1a1a1b;
@@ -32,13 +32,20 @@ html, body {
   left: 0;
   width: 100%;
   height: 72px;
-  background: #1a1a1b;
+  background: #ffffff;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(26,26,27,0.08);
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.masthead.scrolled {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .header-left {
@@ -49,7 +56,6 @@ html, body {
 .header-emblems {
   display: flex;
   align-items: center;
-  gap: 0;
   cursor: pointer;
   opacity: 0.85;
   transition: opacity 0.3s;
@@ -57,36 +63,47 @@ html, body {
 
 .header-emblems:hover { opacity: 1; }
 
-.header-logo-img {
-  height: 52px;
-  width: auto;
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 28px;
 }
 
-.header-logo-img.mirror {
-  transform: scaleX(-1);
-  margin-left: -14px;
+.hamburger-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1b;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header-emblems.active .hamburger-icon span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.header-emblems.active .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+.header-emblems.active .hamburger-icon span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: 1.8rem;
-  letter-spacing: 10px;
-  line-height: 0.8;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  line-height: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-image: url('/camino.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: rgba(255,255,255,0.1);
-  -webkit-text-fill-color: rgba(255,255,255,0.1);
+  align-items: flex-start;
+  color: #1a1a1b;
+  -webkit-text-fill-color: #1a1a1b;
 }
 
 .logo span { display: block; }
+.logo span:nth-child(2) { padding-left: 6rem; }
 .header-spacer { width: 45px; }
 
 /* Menú desplegable */
@@ -96,12 +113,12 @@ html, body {
   left: 40px;
   width: 300px;
   max-height: 0;
-  background: #1a1a1b;
+  background: #ffffff;
   z-index: 99;
   overflow: hidden;
   transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  border: 1px solid rgba(26,26,27,0.08);
   border-top: none;
 }
 
@@ -136,7 +153,7 @@ html, body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
   font-style: italic;
-  color: rgba(255,255,255,0.8);
+  color: rgba(26,26,27,0.8);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -187,7 +204,7 @@ html, body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  color: rgba(26,26,27,0.45);
+  color: rgba(26,26,27,0.68);
 }
 
 .articulo-cuerpo p {
@@ -212,8 +229,8 @@ html, body {
 /* Hero de sección */
 .seccion-hero {
   width: 100%;
-  height: 70vh;
-  min-height: 420px;
+  height: 58vh;
+  min-height: 380px;
   background-size: cover;
   background-position: center;
   background-color: #1a1a1b;
@@ -227,7 +244,7 @@ html, body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 35%, rgba(0,0,0,0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%);
 }
 
 .seccion-hero-titulo {
@@ -235,39 +252,17 @@ html, body {
   z-index: 1;
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 5rem;
   color: #ffffff;
   margin: 0;
-  padding: 0 60px 52px;
-  letter-spacing: 2px;
-}
-
-.seccion-hero--artistica {
-  height: 88vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.seccion-hero--artistica::after {
-  background: rgba(0,0,0,0.1);
-}
-
-.seccion-hero--artistica .seccion-hero-titulo {
-  font-size: 17vw;
-  letter-spacing: -4px;
-  line-height: 0.9;
-  padding: 0;
-  text-align: center;
-  mix-blend-mode: overlay;
-  color: rgba(255,255,255,0.92);
-  -webkit-text-fill-color: rgba(255,255,255,0.92);
+  padding: 0 60px 48px;
+  letter-spacing: 1px;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {
-  .seccion-hero { height: 50vh; min-height: 300px; }
-  .seccion-hero-titulo { font-size: 2.4rem; padding: 0 24px 36px; }
-  .seccion-hero--artistica { height: 60vh; }
-  .seccion-hero--artistica .seccion-hero-titulo { font-size: 22vw; letter-spacing: -2px; }
+  .seccion-hero { height: 45vh; min-height: 280px; }
+  .seccion-hero-titulo { font-size: 3rem; padding: 0 24px 32px; }
 }
 
 /* Páginas de sección */
@@ -289,8 +284,9 @@ html, body {
 
 .seccion-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 720px;
 }
 
 .seccion-item {
@@ -303,12 +299,21 @@ html, body {
   flex-direction: column;
   text-decoration: none;
   color: inherit;
-  padding: 40px 36px;
+  padding: 40px 48px;
   height: 100%;
   transition: background 0.3s, border-color 0.3s;
 }
 
-.seccion-link:hover { background: rgba(26,26,27,0.02); border-color: rgba(107,13,30,0.2); }
+.seccion-link:hover { background: rgba(26,26,27,0.02); }
+
+.seccion-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--page-divider);
+  margin-bottom: 24px;
+}
 
 .seccion-cat {
   font-family: var(--serif-heading);
@@ -316,17 +321,17 @@ html, body {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--accent-color);
-  margin-bottom: 20px;
   display: block;
+  margin-bottom: 0;
 }
 
 .seccion-item h2 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   line-height: 1.15;
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   color: var(--page-heading-color);
   transition: color 0.3s;
 }
@@ -335,21 +340,20 @@ html, body {
 
 .seccion-item p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.65;
   color: var(--page-text-muted);
   margin: 0;
-  flex: 1;
 }
 
 .seccion-autor {
   font-family: 'Source Sans 3', sans-serif;
   font-size: 0.65rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: var(--page-text-author);
-  margin-top: 28px;
+  margin-top: 0;
 }
 
 @media (max-width: 768px) {
@@ -385,7 +389,7 @@ html, body {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1rem;
-  color: rgba(26,26,27,0.6);
+  color: rgba(26,26,27,0.75);
   border-left: 2px solid rgba(26,26,27,0.1);
   padding-left: 20px;
   margin: 40px 0 40px 20px;
@@ -398,7 +402,7 @@ html, body {
   font-size: 0.7rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(26,26,27,0.35);
+  color: rgba(26,26,27,0.58);
   margin-top: 10px;
 }
 .articulo-blockquote {
@@ -427,7 +431,7 @@ html, body {
   font-family: var(--serif-heading);
   font-size: 0.65rem;
   letter-spacing: 4px;
-  color: rgba(26,26,27,0.25);
+  color: rgba(26,26,27,0.45);
   margin: 60px 0 24px;
   display: block;
 }
@@ -453,7 +457,7 @@ html, body {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.1rem;
-  color: rgba(26,26,27,0.45);
+  color: rgba(26,26,27,0.68);
   margin: -20px 0 40px;
   text-align: left;
 }
@@ -464,14 +468,14 @@ html, body {
   padding-top: 20px;
   border-top: 1px solid rgba(26,26,27,0.08);
   font-size: 0.8rem;
-  color: rgba(26,26,27,0.4);
+  color: rgba(26,26,27,0.65);
   font-style: italic;
   line-height: 1.7;
 }
 
 .articulo-nota {
   font-size: 0.8rem;
-  color: rgba(26,26,27,0.35);
+  color: rgba(26,26,27,0.58);
   font-style: italic;
   margin-top: 60px;
   border-top: 1px solid rgba(26,26,27,0.08);
@@ -483,7 +487,7 @@ html, body {
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: rgba(26,26,27,0.35);
+  color: rgba(26,26,27,0.58);
   margin: 60px 0 40px;
   font-weight: 400;
 }
@@ -496,7 +500,7 @@ html, body {
   letter-spacing: 3px;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgba(26,26,27,0.4);
+  color: rgba(26,26,27,0.65);
   transition: color 0.3s;
 }
 
@@ -529,10 +533,11 @@ html, body {
 .editorial-titulo {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 2.8rem;
-  line-height: 1.1;
+  font-size: 5rem;
+  line-height: 1;
   color: var(--text-color);
   margin: 0 0 36px;
+  letter-spacing: 2px;
 }
 
 .editorial-divider {
@@ -636,6 +641,6 @@ html, body {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1rem;
-  color: rgba(26,26,27,0.5);
+  color: rgba(26,26,27,0.70);
   line-height: 1.8;
 }
