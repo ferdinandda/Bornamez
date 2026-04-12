@@ -84,15 +84,15 @@ html, body {
 .hamburger-icon {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  width: 28px;
+  gap: 3px;
+  width: 15px;
 }
 
 .hamburger-icon span {
   display: block;
   height: 2px;
   width: 100%;
-  background: #1a1a1b;
+  background: #6b0d1e;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -115,24 +115,23 @@ html, body {
 .logo {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.15rem;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   line-height: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin-right: 0;
-  
-  color: #1a1a1b;
-  -webkit-text-fill-color: #1a1a1b;
+  color: #6b0d1e;
+  -webkit-text-fill-color: #6b0d1e;
   
   transition: all 0.3s ease;
 }
 
 .logo span { display: block; }
 
-.logo span:nth-child(2) { padding-left: 6rem; }
+.logo span:nth-child(2) { padding-left: 0; }
 
 .masthead {
   border-bottom: 1px solid rgba(26, 26, 27, 0.08);
@@ -222,8 +221,9 @@ html, body {
 .hero-content {
   position: absolute;
   bottom: 100px;
-  left: 60px;
-  max-width: 800px;
+  left: 40px;
+  right: 40px;
+  max-width: 760px;
 }
 
 .magazine-label {
@@ -339,6 +339,16 @@ html, body {
 @media (max-width: 768px) {
   .pub-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    bottom: 80px;
+    left: 24px;
+    right: 24px;
+  }
+
+  .magazine-quote {
+    font-size: 1.5rem;
   }
 }
 
