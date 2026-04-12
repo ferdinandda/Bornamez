@@ -42,12 +42,6 @@ html, body {
   transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
-.masthead.scrolled {
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
 .header-left {
   display: flex;
   align-items: center;
@@ -66,15 +60,15 @@ html, body {
 .hamburger-icon {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  width: 28px;
+  gap: 3px;
+  width: 15px;
 }
 
 .hamburger-icon span {
   display: block;
   height: 2px;
   width: 100%;
-  background: #1a1a1b;
+  background: #6b0d1e;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -91,19 +85,19 @@ html, body {
 .logo {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.15rem;
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   line-height: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: #1a1a1b;
-  -webkit-text-fill-color: #1a1a1b;
+  color: #6b0d1e;
+  -webkit-text-fill-color: #6b0d1e;
 }
 
 .logo span { display: block; }
-.logo span:nth-child(2) { padding-left: 6rem; }
+.logo span:nth-child(2) { padding-left: 3.2rem; }
 .header-spacer { width: 45px; }
 
 /* Menú desplegable */
@@ -183,7 +177,7 @@ html, body {
 .articulo-titulo {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.1;
   color: var(--text-color);
   margin-bottom: 28px;
@@ -208,8 +202,8 @@ html, body {
 }
 
 .articulo-cuerpo p {
-  font-size: 1.05rem;
-  line-height: 1.9;
+  font-size: 0.88rem;
+  line-height: 1.85;
   color: rgba(26,26,27,0.85);
   margin-bottom: 1.8em;
   text-align: justify;
@@ -217,7 +211,7 @@ html, body {
 
 .articulo-cuerpo p:first-child::first-letter {
   font-family: 'Playfair Display', serif;
-  font-size: 4rem;
+  font-size: 2.6rem;
   font-weight: 900;
   line-height: 0.8;
   float: left;
@@ -229,8 +223,8 @@ html, body {
 /* Hero de sección */
 .seccion-hero {
   width: 100%;
-  height: 58vh;
-  min-height: 380px;
+  aspect-ratio: 16 / 7;
+  height: auto;
   background-size: cover;
   background-position: center;
   background-color: #1a1a1b;
@@ -261,7 +255,7 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .seccion-hero { height: 45vh; min-height: 280px; }
+  .seccion-hero { aspect-ratio: 4 / 3; }
   .seccion-hero-titulo { font-size: 3rem; padding: 0 24px 32px; }
 }
 
@@ -374,6 +368,25 @@ html, body {
   .seccion-link {
     padding: 28px 24px;
   }
+
+  .seccion-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .seccion-item h2 {
+    font-size: 1.3rem;
+  }
+
+  .seccion-item p {
+    font-size: 0.9rem;
+  }
+
+  .seccion-autor {
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+  }
 }
 
 .seccion-vacia {
@@ -456,7 +469,7 @@ html, body {
 .articulo-subtitulo-texto {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: rgba(26,26,27,0.68);
   margin: -20px 0 40px;
   text-align: left;
@@ -533,7 +546,7 @@ html, body {
 .editorial-titulo {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 5rem;
+  font-size: 2rem;
   line-height: 1;
   color: var(--text-color);
   margin: 0 0 36px;
@@ -549,8 +562,8 @@ html, body {
 }
 
 .editorial-body p {
-  font-size: 1.05rem;
-  line-height: 1.95;
+  font-size: 0.92rem;
+  line-height: 1.85;
   color: rgba(26,26,27,0.82);
   margin-bottom: 1.8em;
   text-align: justify;
@@ -558,7 +571,7 @@ html, body {
 
 .editorial-body p:first-child::first-letter {
   font-family: 'Playfair Display', serif;
-  font-size: 4rem;
+  font-size: 2.6rem;
   font-weight: 900;
   line-height: 0.8;
   float: left;
@@ -569,8 +582,8 @@ html, body {
 
 /* Convocatoria */
 .conv-body p {
-  font-size: 1.05rem;
-  line-height: 1.95;
+  font-size: 0.88rem;
+  line-height: 1.85;
   color: rgba(26,26,27,0.82);
   margin-bottom: 1.6em;
   text-align: justify;
@@ -593,8 +606,8 @@ html, body {
 }
 
 .conv-lista li {
-  font-size: 1.05rem;
-  line-height: 1.9;
+  font-size: 0.88rem;
+  line-height: 1.85;
   color: rgba(26,26,27,0.82);
   padding-left: 20px;
   position: relative;

@@ -4,19 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menuBtn');
   const sideMenu = document.getElementById('sideMenu');
 
-  // Efecto blur en topbar al salir de la hero section
-  const masthead = document.querySelector('.masthead');
-  if (masthead) {
-    const onScroll = () => {
-      if (window.scrollY > window.innerHeight * 0.8) {
-        masthead.classList.add('scrolled');
-      } else {
-        masthead.classList.remove('scrolled');
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-  }
-
   if (menuBtn && sideMenu) {
     menuBtn.addEventListener('click', (e) => {
       e.stopPropagation();

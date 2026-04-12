@@ -121,7 +121,7 @@ html, body {
   line-height: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin-right: 0;
   color: #6b0d1e;
   -webkit-text-fill-color: #6b0d1e;
@@ -131,18 +131,12 @@ html, body {
 
 .logo span { display: block; }
 
-.logo span:nth-child(2) { padding-left: 0; }
+.logo span:nth-child(2) { padding-left: 3.2rem; }
 
 .masthead {
   border-bottom: 1px solid rgba(26, 26, 27, 0.08);
 }
 
-.masthead.scrolled {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(26, 26, 27, 0.08);
-}
 
 /* Menú Desplegable (Pequeño y Elegante - Negro) */
 .dropdown-menu {
@@ -350,6 +344,24 @@ html, body {
   .magazine-quote {
     font-size: 1.5rem;
   }
+
+  .pub-link {
+    padding: 24px 20px;
+  }
+
+  .pub-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .pub-item p {
+    font-size: 0.9rem;
+  }
+
+  .pub-author {
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+    margin-top: 16px;
+  }
 }
 
 /* Footer */
@@ -380,7 +392,7 @@ html, body {
   letter-spacing: 6px;
   margin-bottom: 24px;
   text-transform: uppercase;
-  color: #1a1a1b;
+  color: #6b0d1e;
   opacity: 0.9;
 }
 
