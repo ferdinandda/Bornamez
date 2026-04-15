@@ -815,13 +815,6 @@ html, body {
 .img-wrap {
   position: relative;
   display: block;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.img-wrap img {
-  width: 100%;
-  display: block;
 }
 
 .foto-credito {
