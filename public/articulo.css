@@ -815,6 +815,7 @@ html, body {
 .img-wrap {
   position: relative;
   display: block;
+  overflow: hidden;
 }
 
 .foto-credito {

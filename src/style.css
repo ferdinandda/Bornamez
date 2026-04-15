@@ -294,6 +294,8 @@ html, body {
 
 .pub-img-wrap {
   position: relative;
+  display: block;
+  overflow: hidden;
 }
 
 .pub-img {
