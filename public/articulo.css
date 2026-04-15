@@ -480,15 +480,13 @@ html, body {
 }
 
 .poema-nota {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #1a1a1b;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: rgba(26,26,27,0.85);
   margin-top: 60px;
-  border-top: 2px solid #1a1a1b;
-  padding-top: 20px;
+  border-top: 1px solid rgba(26,26,27,0.3);
+  padding-top: 24px;
   line-height: 1.8;
 }
 
