@@ -452,7 +452,7 @@ html, body {
   text-align: left !important;
   line-height: 2;
   margin-bottom: 2.2em;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: rgba(26,26,27,0.85);
 }
 .poema-cuerpo p:first-child::first-letter { all: unset; }
