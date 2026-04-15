@@ -281,11 +281,28 @@ html, body {
   position: relative;
 }
 
+.pub-img-wrap {
+  position: relative;
+}
+
 .pub-img {
   width: 100%;
   height: 210px;
   object-fit: cover;
   display: block;
+}
+
+.foto-credito {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.85);
+  background: rgba(0,0,0,0.35);
+  padding: 2px 6px;
+  pointer-events: none;
 }
 
 .pub-link {
