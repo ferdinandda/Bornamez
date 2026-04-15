@@ -814,6 +814,9 @@ html, body {
   }
 
   /* Reducir indentaciones en mobile preservando niveles */
+  .indent-2  { padding-left: 2% !important; }
+  .indent-3  { padding-left: 3% !important; }
+  .indent-5  { padding-left: 5% !important; }
   .indent-8  { padding-left: 8% !important; }
   .indent-10 { padding-left: 10% !important; }
   .indent-13 { padding-left: 13% !important; }
@@ -822,6 +825,9 @@ html, body {
 }
 
 /* Clases de indentación para poesía */
+.indent-2  { padding-left: 2em; }
+.indent-3  { padding-left: 3em; }
+.indent-5  { padding-left: 5em; }
 .indent-8  { padding-left: 8em; }
 .indent-10 { padding-left: 10em; }
 .indent-13 { padding-left: 13em; }
