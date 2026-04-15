@@ -288,6 +288,13 @@ html, body {
   background: var(--page-card-bg);
 }
 
+.seccion-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
 .seccion-link {
   display: flex;
   flex-direction: column;
