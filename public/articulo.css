@@ -785,7 +785,7 @@ html, body {
 
   .articulo-cuerpo p {
     font-size: 0.88rem;
-    text-align: left;
+    text-align: justify;
   }
 
   /* Poemas: evitar desbordamiento horizontal */
