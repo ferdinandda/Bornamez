@@ -41,19 +41,18 @@ if (form) {
     const email = document.getElementById('subscribeEmail').value;
 
     try {
-      const res = await fetch('http://localhost:3001/suscribir', {
+      const res = await fetch('https://formspree.io/f/mlgagpjq', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
       });
-      const data = await res.json();
 
       if (res.ok) {
         msg.textContent = 'Gracias por suscribirte.';
-        msg.style.color = 'rgba(255,255,255,0.6)';
+        msg.style.color = 'rgba(26,26,27,0.6)';
         form.reset();
       } else {
-        msg.textContent = data.error || 'Ocurrió un error.';
+        msg.textContent = 'Ocurrió un error. Intenta más tarde.';
         msg.style.color = 'rgba(255,100,100,0.7)';
       }
     } catch {
