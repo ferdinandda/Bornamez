@@ -798,6 +798,7 @@ html, body {
     line-height: 1.9;
     overflow-wrap: break-word;
     word-break: break-word;
+    white-space: normal !important;
   }
 
   .articulo-blockquote {
@@ -811,7 +812,21 @@ html, body {
   .articulo-cuerpo p.articulo-nota {
     font-size: 1rem !important;
   }
+
+  /* Reducir indentaciones en mobile preservando niveles */
+  .indent-8  { padding-left: 8% !important; }
+  .indent-10 { padding-left: 10% !important; }
+  .indent-13 { padding-left: 13% !important; }
+  .indent-14 { padding-left: 14% !important; }
+  .indent-20 { padding-left: 20% !important; }
 }
+
+/* Clases de indentación para poesía */
+.indent-8  { padding-left: 8em; }
+.indent-10 { padding-left: 10em; }
+.indent-13 { padding-left: 13em; }
+.indent-14 { padding-left: 14em; }
+.indent-20 { padding-left: 20em; }
 
 .img-wrap {
   position: relative;
