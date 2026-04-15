@@ -771,3 +771,43 @@ html, body {
 .editorial-card-body {
   padding: 28px 32px 32px;
 }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .articulo-main {
+    padding: 110px 20px 80px;
+  }
+
+  .articulo-titulo {
+    font-size: 1.5rem;
+  }
+
+  .articulo-cuerpo p {
+    font-size: 0.88rem;
+    text-align: left;
+  }
+
+  /* Poemas: evitar desbordamiento horizontal */
+  .poema-cuerpo {
+    overflow-x: hidden;
+  }
+
+  .poema-cuerpo p {
+    font-size: 0.88rem;
+    line-height: 1.9;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .articulo-blockquote {
+    padding-left: 16px;
+    margin: 24px 0;
+  }
+
+  .poema-nota,
+  .articulo-cuerpo p.poema-nota,
+  .articulo-nota,
+  .articulo-cuerpo p.articulo-nota {
+    font-size: 1rem !important;
+  }
+}
