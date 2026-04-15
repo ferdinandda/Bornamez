@@ -262,14 +262,30 @@ html, body {
 }
 
 .pub-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 32px;
 }
 
 .pub-item {
-  border: 1px solid rgba(26, 26, 27, 0.12);
   background: #ffffff;
+  box-shadow: 0 4px 18px rgba(26,26,27,0.13), 0 1px 4px rgba(26,26,27,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 10px 10px 0;
+}
+
+.pub-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 36px rgba(26,26,27,0.18), 0 2px 8px rgba(26,26,27,0.10);
+  z-index: 2;
+  position: relative;
+}
+
+.pub-img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
 }
 
 .pub-link {
@@ -277,22 +293,28 @@ html, body {
   flex-direction: column;
   text-decoration: none;
   color: inherit;
-  padding: 36px 40px;
-  transition: background 0.3s, border-color 0.3s;
+  padding: 0 8px 24px;
+}
+
+.pub-link .pub-cat {
+  margin-top: 28px;
 }
 
 .pub-link:hover {
-  background: rgba(26, 26, 27, 0.02);
-  border-color: rgba(107, 13, 30, 0.2);
+  background: transparent;
+}
+
+.pub-link-content {
+  display: contents;
 }
 
 .pub-cat {
   font-family: var(--serif-heading);
-  font-size: 0.58rem;
-  letter-spacing: 4px;
+  font-size: 0.52rem;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--accent-color);
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   display: block;
 }
 
@@ -300,9 +322,9 @@ html, body {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 1.75rem;
-  line-height: 1.15;
-  margin: 0 0 18px;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  margin: 0 0 6px;
   color: #1a1a1b;
   transition: color 0.3s;
 }
@@ -322,17 +344,18 @@ html, body {
 
 .pub-author {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: rgba(26, 26, 27, 0.75);
-  margin-top: 28px;
+  margin-top: 6px;
 }
 
 @media (max-width: 768px) {
   .pub-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .hero-content {

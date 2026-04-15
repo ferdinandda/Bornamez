@@ -22,6 +22,14 @@ export default defineConfig({
         'poesia-dos': resolve(__dirname, 'poesia/dos-imagenes-sobre-mi-padre.html'),
         'resena-cine': resolve(__dirname, 'resena/cine-y-melancolia.html'),
         'resena-petiso': resolve(__dirname, 'resena/el-que-aqui-reposa-fue-criminal-y-llego-a-ser-godino.html'),
+        'resena-murmullo': resolve(__dirname, 'resena/el-murmullo-de-los-estorninos.html'),
+        'resena-crestas': resolve(__dirname, 'resena/entre-crestas-y-caidas.html'),
+        'narrativa-verano': resolve(__dirname, 'narrativa/del-verano-al-otono-nueve-anos-atras.html'),
+        'narrativa-carreta': resolve(__dirname, 'narrativa/la-carreta-las-fogatas.html'),
+        'editorial-n1': resolve(__dirname, 'editorial/editorial-n1-una-forma-de-hablar-llano.html'),
+        'poesia-aranguiz': resolve(__dirname, 'poesia/cinco-poemas-de-david-aranguiz.html'),
+        'poesia-joaquin': resolve(__dirname, 'poesia/quisiera-flores-blancas-sobre-mis-brazos.html'),
+        'poesia-tres': resolve(__dirname, 'poesia/tres-poemas-de-pantano.html'),
       }
     }
   }
