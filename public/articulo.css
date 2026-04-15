@@ -481,9 +481,9 @@ html, body {
 
 .poema-nota {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-style: italic;
-  color: #1a1a1b;
+  color: #000000;
   margin-top: 60px;
   border-top: 1px solid rgba(26,26,27,0.3);
   padding-top: 24px;
@@ -522,8 +522,8 @@ html, body {
 
 .articulo-nota {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
-  color: #1a1a1b;
+  font-size: 1.25rem;
+  color: #000000;
   font-style: italic;
   margin-top: 60px;
   border-top: 1px solid rgba(26,26,27,0.3);
