@@ -320,6 +320,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 18px;
   padding-bottom: 18px;
   border-bottom: 1px solid var(--page-divider);
   margin-bottom: 24px;
