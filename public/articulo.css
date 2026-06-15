@@ -553,6 +553,14 @@ html, body {
   margin: 60px 0 32px;
 }
 
+.articulo-foto-credito {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(26,26,27,0.5);
+  font-style: italic;
+  margin-top: 2.5rem;
+}
+
 .articulo-volver {
   display: inline-block;
   margin-top: 80px;
