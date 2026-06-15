@@ -47,6 +47,10 @@ export default defineConfig({
         'narrativa-solicitud': resolve(__dirname, 'narrativa/la-solicitud.html'),
         'narrativa-mujer-internet': resolve(__dirname, 'narrativa/una-mujer-conectada-a-internet.html'),
         'narrativa-cuidado-perro': resolve(__dirname, 'narrativa/cuidado-con-el-perro.html'),
+        'resena-al-sur-invierno': resolve(__dirname, 'resena/al-sur-del-invierno-esta-la-nieve.html'),
+        'resena-de-sol-a-sol': resolve(__dirname, 'resena/de-sol-a-sol.html'),
+        'resena-migrar-artes': resolve(__dirname, 'resena/migrar-y-otras-artes.html'),
+        'resena-pequeno-rito': resolve(__dirname, 'resena/un-pequeno-rito-para-mantenerse-con-vida.html'),
       }
     }
   }
