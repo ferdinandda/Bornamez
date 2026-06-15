@@ -27,6 +27,7 @@ export default defineConfig({
         'narrativa-verano': resolve(__dirname, 'narrativa/del-verano-al-otono-nueve-anos-atras.html'),
         'narrativa-carreta': resolve(__dirname, 'narrativa/la-carreta-las-fogatas.html'),
         'editorial-n1': resolve(__dirname, 'editorial/editorial-n1-una-forma-de-hablar-llano.html'),
+        'editorial-n2': resolve(__dirname, 'editorial/editorial-n2-despues-de-las-formas.html'),
         'poesia-aranguiz': resolve(__dirname, 'poesia/cinco-poemas-de-david-aranguiz.html'),
         'poesia-joaquin': resolve(__dirname, 'poesia/quisiera-flores-blancas-sobre-mis-brazos.html'),
         'poesia-tres': resolve(__dirname, 'poesia/tres-poemas-de-pantano.html'),
