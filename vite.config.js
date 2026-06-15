@@ -35,6 +35,14 @@ export default defineConfig({
         'poesia-aranguiz': resolve(__dirname, 'poesia/cinco-poemas-de-david-aranguiz.html'),
         'poesia-joaquin': resolve(__dirname, 'poesia/quisiera-flores-blancas-sobre-mis-brazos.html'),
         'poesia-tres': resolve(__dirname, 'poesia/tres-poemas-de-pantano.html'),
+        'poesia-cuatro-contreras': resolve(__dirname, 'poesia/cuatro-poemas-de-patricio-contreras.html'),
+        'poesia-desarma-drones': resolve(__dirname, 'poesia/desarma-drones.html'),
+        'poesia-tarasco': resolve(__dirname, 'poesia/dos-poemas-de-tarasco.html'),
+        'poesia-otras-ciudades': resolve(__dirname, 'poesia/otras-ciudades.html'),
+        'poesia-terrones': resolve(__dirname, 'poesia/terrones-en-el-craneo.html'),
+        'poesia-pterigion': resolve(__dirname, 'poesia/pterigion.html'),
+        'poesia-lenticular': resolve(__dirname, 'poesia/lenticular.html'),
+        'poesia-mardones': resolve(__dirname, 'poesia/tres-poemas-de-ignacio-mardones.html'),
       }
     }
   }
