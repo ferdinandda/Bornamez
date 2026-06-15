@@ -43,6 +43,10 @@ export default defineConfig({
         'poesia-pterigion': resolve(__dirname, 'poesia/pterigion.html'),
         'poesia-lenticular': resolve(__dirname, 'poesia/lenticular.html'),
         'poesia-mardones': resolve(__dirname, 'poesia/tres-poemas-de-ignacio-mardones.html'),
+        'narrativa-dos-de-cinco': resolve(__dirname, 'narrativa/dos-de-cinco.html'),
+        'narrativa-solicitud': resolve(__dirname, 'narrativa/la-solicitud.html'),
+        'narrativa-mujer-internet': resolve(__dirname, 'narrativa/una-mujer-conectada-a-internet.html'),
+        'narrativa-cuidado-perro': resolve(__dirname, 'narrativa/cuidado-con-el-perro.html'),
       }
     }
   }
