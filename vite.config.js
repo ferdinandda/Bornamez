@@ -51,6 +51,17 @@ export default defineConfig({
         'resena-de-sol-a-sol': resolve(__dirname, 'resena/de-sol-a-sol.html'),
         'resena-migrar-artes': resolve(__dirname, 'resena/migrar-y-otras-artes.html'),
         'resena-pequeno-rito': resolve(__dirname, 'resena/un-pequeno-rito-para-mantenerse-con-vida.html'),
+        'editorial-n3': resolve(__dirname, 'editorial/editorial-n3-una-reserva-de-sentido.html'),
+        'ensayo-secreta-casa': resolve(__dirname, 'ensayo/la-secreta-casa-de-la-noche.html'),
+        'ensayo-secret-destination': resolve(__dirname, 'ensayo/secret-destination.html'),
+        'ensayo-pascal': resolve(__dirname, 'ensayo/blaise-pascal-la-necesidad-del-estilo-fragmentario.html'),
+        'ensayo-interludios': resolve(__dirname, 'ensayo/interludios.html'),
+        'ensayo-once': resolve(__dirname, 'ensayo/por-que-no-escribi-sobre-el-once.html'),
+        'resena-paz-soldan': resolve(__dirname, 'resena/imaginacion-postantropocentrica-en-el-comienzo-del-paraiso.html'),
+        'resena-medida-azar': resolve(__dirname, 'resena/la-medida-y-el-azar-claves-para-leer-el-silencio.html'),
+        'resena-flor': resolve(__dirname, 'resena/la-flor-como-acontecimiento.html'),
+        'resena-fugu': resolve(__dirname, 'resena/en-torno-a-fugu.html'),
+        'resena-liebres': resolve(__dirname, 'resena/antes-de-que-las-ramas-se-quiebren.html'),
       }
     }
   }
